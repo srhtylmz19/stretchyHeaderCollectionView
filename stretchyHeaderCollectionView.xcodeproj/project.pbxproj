@@ -12,6 +12,13 @@
 		330E868722674CA5008A36DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330E868522674CA5008A36DC /* Main.storyboard */; };
 		330E868922674CA6008A36DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330E868822674CA6008A36DC /* Assets.xcassets */; };
 		330E868C22674CA6008A36DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330E868A22674CA6008A36DC /* LaunchScreen.storyboard */; };
+		330E86942267521E008A36DC /* StretchyHeaderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E86932267521E008A36DC /* StretchyHeaderCollectionViewController.swift */; };
+		330E869622675681008A36DC /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E869522675681008A36DC /* MainCollectionViewCell.swift */; };
+		330E869822675C02008A36DC /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E869722675C02008A36DC /* UIView-Extension.swift */; };
+		330E869C22675D08008A36DC /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E869B22675D08008A36DC /* HeaderCollectionViewCell.swift */; };
+		330E869F226767C6008A36DC /* StretchHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E869E226767C6008A36DC /* StretchHeaderLayout.swift */; };
+		330E86A122679C75008A36DC /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E86A022679C74008A36DC /* UIColor-Extension.swift */; };
+		330E86A52267A4E4008A36DC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E86A42267A4E4008A36DC /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		330E868822674CA6008A36DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		330E868B22674CA6008A36DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		330E868D22674CA6008A36DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		330E86932267521E008A36DC /* StretchyHeaderCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderCollectionViewController.swift; sourceTree = "<group>"; };
+		330E869522675681008A36DC /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		330E869722675C02008A36DC /* UIView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
+		330E869B22675D08008A36DC /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		330E869E226767C6008A36DC /* StretchHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchHeaderLayout.swift; sourceTree = "<group>"; };
+		330E86A022679C74008A36DC /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		330E86A42267A4E4008A36DC /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,45 @@
 		330E868022674CA5008A36DC /* stretchyHeaderCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				330E86A42267A4E4008A36DC /* UserModel.swift */,
+				330E869D226767AE008A36DC /* CollectionViewLayout */,
+				330E869A22675CFC008A36DC /* View */,
+				330E869922675CED008A36DC /* Helper */,
 				330E868122674CA5008A36DC /* AppDelegate.swift */,
 				330E868322674CA5008A36DC /* ViewController.swift */,
 				330E868522674CA5008A36DC /* Main.storyboard */,
 				330E868822674CA6008A36DC /* Assets.xcassets */,
 				330E868A22674CA6008A36DC /* LaunchScreen.storyboard */,
 				330E868D22674CA6008A36DC /* Info.plist */,
+				330E86932267521E008A36DC /* StretchyHeaderCollectionViewController.swift */,
 			);
 			path = stretchyHeaderCollectionView;
+			sourceTree = "<group>";
+		};
+		330E869922675CED008A36DC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				330E86A022679C74008A36DC /* UIColor-Extension.swift */,
+				330E869722675C02008A36DC /* UIView-Extension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		330E869A22675CFC008A36DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				330E869B22675D08008A36DC /* HeaderCollectionViewCell.swift */,
+				330E869522675681008A36DC /* MainCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		330E869D226767AE008A36DC /* CollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				330E869E226767C6008A36DC /* StretchHeaderLayout.swift */,
+			);
+			path = CollectionViewLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +181,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				330E868422674CA5008A36DC /* ViewController.swift in Sources */,
+				330E86A122679C75008A36DC /* UIColor-Extension.swift in Sources */,
+				330E869622675681008A36DC /* MainCollectionViewCell.swift in Sources */,
 				330E868222674CA5008A36DC /* AppDelegate.swift in Sources */,
+				330E869C22675D08008A36DC /* HeaderCollectionViewCell.swift in Sources */,
+				330E869F226767C6008A36DC /* StretchHeaderLayout.swift in Sources */,
+				330E869822675C02008A36DC /* UIView-Extension.swift in Sources */,
+				330E86942267521E008A36DC /* StretchyHeaderCollectionViewController.swift in Sources */,
+				330E86A52267A4E4008A36DC /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
